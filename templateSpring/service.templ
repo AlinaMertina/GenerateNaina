@@ -1,0 +1,17 @@
+/home/mertina/Bureau/L3/S5/Mrtovo/commerce/src/main/java/com/pack/commerce/Service
+package com.pack.commerce.Service;
+
+import com.pack.commerce.Repository.nomtableRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+
+@Service
+public class nomtableService {
+    nomtableRepository mintableRepository;
+
+    @Autowired
+    public nomtableService(nomtableRepository mintableRepository){
+        this.mintableRepository=mintableRepository;
+    }
+}

@@ -1,0 +1,67 @@
+/home/mertina/Bureau/L3/S5/WebServiceNaina/GenerateControlleur/WEB-INF/classes
+package etu002087.entity;
+
+import etu002087.entity.nomClasse;
+
+import java.util.HashMap;
+import java.util.Vector;
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date; 
+
+import generaliser.AmethodeSet;
+import generaliser.Generaliser; 
+import generaliser.ANomTable; 
+import generaliser.Adatabase; 
+import generaliser.AmethodeGet; 
+import generaliser.APrimarykey; 
+
+import etu002087.framework.Urlannotation; 
+import etu002087.framework.ModelView; 
+import etu002087.framework.Scopeannotation; 
+import etu002087.framework.Set_value_jspannotation; 
+import etu002087.framework.Sessionannotation; 
+import etu002087.framework.Gsonannotation;
+
+
+@Scopeannotation(indication="singleton")
+public class nomClasseController {
+    
+    public nomClasseController(){
+    }
+
+    @Gsonannotation
+    @Urlannotation(index = "findallnomClasse.do",nomparametre = {})
+    public java.util.List<nomClasse> findall(){
+        nomClasse value = new nomClasse();
+        return value.selectAll();
+    }   
+
+    @Gsonannotation
+    @Urlannotation(index = "findonenomClasse.do",nomparametre = {"id"})
+    public nomClasse findone(String id){
+        nomClasse value = new nomClasse();
+        value.setmaxCol(id);
+        value.findOne();
+        return value;
+    } 
+
+    @Gsonannotation
+    @Urlannotation(index = "removenomClasse.do",nomparametre = {"id"})
+    public String remove(String id){
+        nomClasse value = new nomClasse();
+        value.setmaxCol(id);
+        value.delete(null);
+        return "remove";
+    }   
+
+    @Gsonannotation
+    @Urlannotation(index = "updatenomClasse.do",nomparametre = { entrepar })
+    public String  upate(parametreliste){
+        nomClasse value = new nomClasse( test );
+        value.update(null);
+        return "upate";
+    }   
+}

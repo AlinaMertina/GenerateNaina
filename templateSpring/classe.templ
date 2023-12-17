@@ -1,0 +1,44 @@
+/home/mertina/Bureau/L3/S5/Mrtovo/commerce/src/main/java/com/pack/commerce/Entity
+package com.pack.commerce.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+
+
+@Entity
+public class nomtable{
+
+    public nomtable(){}
+    primaryKey
+        @Id
+        @SequenceGenerator(
+            name = "nomtable_sequence",
+            sequenceName = "nomtable_sequence",
+            allocationSize = 1
+        )
+        @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "nomtable_sequence"
+        )
+    finprimaryKey
+
+    attribu
+
+    public nomtable(){}
+
+    
+    debutC
+    @annotationsetteurs
+    public void setmaxCol( Type Colonne){
+        this.Colonne=Colonne;
+    }
+
+    @annotationgetteurs
+    public Type getmaxCol(){
+        return this.Colonne;
+    }
+    finC
+}
